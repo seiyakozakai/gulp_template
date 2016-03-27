@@ -8,7 +8,7 @@ After that
 
 ```sh
 $ node -v
-$ cd gulp-template
+$ cd gulp_template
 $ npm init
 ```
 
@@ -24,26 +24,7 @@ $ npm install --global gulp
 $ npm install --save-dev gulp
 ```
 
-#### 3. Add Plugin
-
-```sh
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var autoprefixer = require("gulp-autoprefixer");
-var frontnote = require("gulp-frontnote");
-var uglify = require("gulp-uglify");
-var browser = require("browser-sync");
-var concat = require("gulp-concat");
-var rename = require('gulp-rename');
-var less = require('gulp-less');
-var minifyCss = require("gulp-minify-css");
-var uglify = require("gulp-uglify");
-var gulpFilter = require('gulp-filter');
-var bower = require('main-bower-files');
-var cssmin = require('gulp-cssmin');
-```
-
-#### 4. Run gulp
+#### 3. Run gulp
 
 ```sh
 $ gulp
