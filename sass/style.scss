@@ -1,23 +1,96 @@
-body{
-  display: block;
+html{
+  font-size: 62.5%;
+}
+
+body {
+  color: #333;
+  font-size: 1.2rem;
+  font-family: "Hiragino Kaku Gothic ProN , Meiryo, sans-serif";
   margin: 0px;
 }
-.header-area{
-  display: block;
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+.header {
   height: 60px;
   width: 100%;
   background-color: green;
+  margin-bottom: 10px;
 }
-.content-area{
-  display: block;
+.wrapper {
   width: 100%;
-  height: 800px;
+  height: 700px;
   background-color: white;
 }
-.footer-area{
+.main {
+  display: block;
+  float: left;
+  width: 70%;
+  background-color: black;
+}
+.sidebar {
+  float: right;
+  width: 30%;
+  background-color: red;
+}
+.main ,.sidebar{
+    height: 500px
+}
+//Lig-media
+.media {
+  text-align: center;
+  margin-top: 30px;
+
+  .media-container{
+    margin-left: -20px;
+    text-align: center;;
+  }
+  .media-list{
+    min-width: 320px;
+    width: 33.33%;
+    float:left;
+    @media screen and (max-width: 955px){
+      float: none;
+      display: inline-block;
+    }
+    .lower-box{
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 90px;
+      background-color: rgba(0,0,0,0.2);
+      padding: 12px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      overflow: hidden;
+      text-align: left;
+      .tag{
+        display: inline-block;
+      }
+      .date{
+        display: inline-block;
+        font-size: 12px;
+        position: relative;
+        top: 1px;
+      }
+      .title{
+        margin-top: 5px;
+        line-height: 1.2px;
+      }
+    }
+    .media-link{
+      display: block;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+  }
+}
+
+.footer {
   height: 50px;
   width: 100%;
   background-color: green;
   margin: auto;
-  margin-top: 5px;
 }

@@ -1,0 +1,24 @@
+{
+  "name": "kozakaiseiya",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "小坂井聖也 <go-ones_way-hero@y.akane.waseda.jp>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/seiyakozakai/gulp_template",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.6"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
