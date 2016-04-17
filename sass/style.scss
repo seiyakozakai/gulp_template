@@ -1,96 +1,144 @@
-html{
+@charset "UTF-8";
+
+/* --------------------------------
+ * base
+ * -------------------------------- */
+html {
   font-size: 62.5%;
 }
-
 body {
+  padding: 30px;
+  background-color: #f6f7fb;
   color: #333;
   font-size: 1.2rem;
-  font-family: "Hiragino Kaku Gothic ProN , Meiryo, sans-serif";
-  margin: 0px;
+  font-family: "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
 }
-*, *::before, *::after{
+*, *::before, *::after {
   box-sizing: border-box;
 }
+a:link, a:visited, a:hover, a:active {
+  color: #7C5119;
+  text-decoration: none;
+}
 
-.header {
-  height: 60px;
-  width: 100%;
-  background-color: green;
-  margin-bottom: 10px;
+
+/* --------------------------------
+ * item
+ * -------------------------------- */
+.item {
+  width: 180px;
+  margin-bottom: 4px;
+  padding: 8px;
+  border-bottom: 3px solid;
+  border-radius: 5px;
+  background-color: #fff;
 }
-.wrapper {
-  width: 100%;
-  height: 700px;
-  background-color: white;
-}
-.main {
+.item .image {
   display: block;
-  float: left;
-  width: 70%;
-  background-color: black;
-}
-.sidebar {
-  float: right;
-  width: 30%;
-  background-color: red;
-}
-.main ,.sidebar{
-    height: 500px
-}
-//Lig-media
-.media {
-  text-align: center;
-  margin-top: 30px;
-
-  .media-container{
-    margin-left: -20px;
-    text-align: center;;
-  }
-  .media-list{
-    min-width: 320px;
-    width: 33.33%;
-    float:left;
-    @media screen and (max-width: 955px){
-      float: none;
-      display: inline-block;
-    }
-    .lower-box{
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 90px;
-      background-color: rgba(0,0,0,0.2);
-      padding: 12px;
-      box-sizing: border-box;
-      color: #FFFFFF;
-      overflow: hidden;
-      text-align: left;
-      .tag{
-        display: inline-block;
-      }
-      .date{
-        display: inline-block;
-        font-size: 12px;
-        position: relative;
-        top: 1px;
-      }
-      .title{
-        margin-top: 5px;
-        line-height: 1.2px;
-      }
-    }
-    .media-link{
-      display: block;
-      margin-left: 20px;
-      margin-bottom: 20px;
-      position: relative;
-    }
-  }
-}
-
-.footer {
-  height: 50px;
   width: 100%;
-  background-color: green;
-  margin: auto;
+  height: 109px;
+}
+.item .category {
+  margin: 15px 9px 10px;
+  color: #aaa;
+  letter-spacing: 1px;
+  font-family: "Trebuchet MS", "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
+}
+.item .category::before {
+  content: '';
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin-right: 5px;
+  border: 2px solid;
+  border-radius: 50%;
+  vertical-align: -5px;
+}
+.item .description {
+  margin: 10px;
+  line-height: 1.5;
+}
+.item > a {
+  display: block;
+  margin: -8px -8px -11px;
+  padding: 8px 8px 11px;
+  border-radius: inherit;
+  color: #777;
+  transition: all 0.3s;
+}
+.item > a:hover {
+  box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.3);
+  opacity: 0.8;
+}
+.item-maindish,
+.item-maindish .category::before {
+  border-color: #FFC0CB;
+}
+.item-appetizer,
+.item-appetizer .category::before {
+  border-color: #76C047;
+}
+.item-column,
+.item-column .category::before {
+  border-color: #FFF100;
+}
+.item-breaktime,
+.item-breaktime .category::before {
+  border-color: #C1EFFF;
+}
+.item-m {
+  width: 364px;
+}
+.item-m .image {
+  height: 146px;
+}
+.item-l {
+  width: 732px;
+}
+.item-l .image {
+  height: 403px;
+}
+
+
+/* --------------------------------
+ * header
+ * -------------------------------- */
+.header {
+  padding: 25px 0;
+  border-bottom: none;
+  text-align: center;
+}
+.logo {
+  width: 136px;
+  height: 136px;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+.logo:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.nav {
+  margin: 35px auto 10px;
+}
+.nav-item {
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.nav-item a {
+  display: inline-block;
+}
+.nav-item a::after {
+  content: '';
+  display: block;
+  width: 0;
+  margin: 6px auto 0;
+  border-bottom: 1px solid #7C5119;
+  transition: width 0.3s ease-in-out;
+}
+.nav-item a:hover::after {
+  width: 100%;
 }
